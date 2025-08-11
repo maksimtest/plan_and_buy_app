@@ -48,4 +48,4 @@ This application respects your privacy. You can read the full privacy policy her
 Clone the repository and open it in **Android Studio**:
 
 ```bash
-git clone https://github.com/maksimtest/https://github.com/maksimtest/plan_and_buy_app.git
+git clone https://github.com/maksimtest/plan_and_buy_app.git
