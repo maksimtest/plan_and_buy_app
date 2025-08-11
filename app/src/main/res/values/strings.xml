@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ShoppingPlanning</string>
+    <string name="title_activity_list_plans">ListPlansActivity</string>
+    <string name="title_activity_shopping">ShoppingActivity</string>
+    <string name="title_activity_category">CategoryActivity</string>
+    <string name="title_activity_planning">PlanningActivity</string>
+    <string name="title_activity_purchases">PurchasesActivity</string>
+    <string name="title_activity_connection">ConnectionActivity</string>
+    <string name="title_activity_main_navigation">MainNavigationActivity</string>
+</resources>
