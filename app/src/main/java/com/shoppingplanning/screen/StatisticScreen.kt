@@ -51,11 +51,6 @@ fun StatisticScreen(
 ) {
     val items = mainViewModel.statItems.collectAsState()
     val periods = mainViewModel.statPeriods.collectAsState()
-    periods.value.forEach {
-        // count++
-        Log.d("MyTag", "periods1: ${it.year}, ${it.month}")
-    }
-
 
     val currentIndexState = remember { mutableIntStateOf(0) }
     Log.d("MyTag", "StatisticScreen: init currentIndexState.intValue=${currentIndexState.intValue}")

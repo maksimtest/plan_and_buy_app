@@ -128,9 +128,7 @@ fun PackageItem(packageItem: PackageEntity, shoppingMode: Boolean, onClick: () -
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            //.height(40.dp)
             .padding(vertical = 8.dp, horizontal = 4.dp)
-            // .background(bcGrColor)
             .clickable { onClick() },
 
         ) {

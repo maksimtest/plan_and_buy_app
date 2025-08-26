@@ -99,7 +99,7 @@ fun NeumorphicBox(
                         style = Paint.Style.FILL
                     }
 
-                    // Левая верхняя светлая тень
+                    // Left top light shadow
                     paint.setShadowLayer(
                         shadowBlurRadius,
                         -offset,
@@ -116,7 +116,7 @@ fun NeumorphicBox(
                         paint
                     )
 
-                    // Правая нижняя тёмная тень
+                    // Right bottom dark shadow
                     paint.setShadowLayer(shadowBlurRadius, offset, offset, darkShadowColor.toArgb())
                     canvas.nativeCanvas.drawRoundRect(
                         0f,
@@ -139,11 +139,11 @@ fun NeumorphicBox(
 fun ShortNeumorphicBox(
     modifier: Modifier = Modifier,
     backgroundColor: Color = Color(0xFFE0E0E0),
-    cornerRadius: Dp = 6.dp,//10.dp,
+    cornerRadius: Dp = 6.dp,
     lightShadowColor: Color = Color.White,
     darkShadowColor: Color = Color(0xFFA3B1C6),
-    shadowBlurRadius: Float = 14f,//20f,
-    offset: Float = 6f,//10f,
+    shadowBlurRadius: Float = 14f,
+    offset: Float = 6f,
     content: @Composable BoxScope.() -> Unit
 ) {
     val radiusPx = with(LocalDensity.current) { cornerRadius.toPx() }
@@ -157,7 +157,7 @@ fun ShortNeumorphicBox(
                         style = Paint.Style.FILL
                     }
 
-                    // Левая верхняя светлая тень
+                    // Left top light shadow
                     paint.setShadowLayer(
                         shadowBlurRadius,
                         -offset,
@@ -174,7 +174,7 @@ fun ShortNeumorphicBox(
                         paint
                     )
 
-                    // Правая нижняя тёмная тень
+                    // Right bottom dark shadow
                     paint.setShadowLayer(shadowBlurRadius, offset, offset, darkShadowColor.toArgb())
                     canvas.nativeCanvas.drawRoundRect(
                         0f,
@@ -195,10 +195,8 @@ fun ShortNeumorphicBox(
 
 @Composable
 fun CreateButton(text: String, onclick: () -> Unit) {
-    // val context = LocalContext.current
     Button(
         onClick = {
-            //onclick(state.value)
             onclick()
         },
         modifier = Modifier
@@ -251,7 +249,7 @@ fun CreateTextField(inputTextState: MutableState<String>, placeholderText: Strin
                             text = placeholderText,
                             fontSize = 14.sp,
                             maxLines = 1,
-                            color = Color.Gray // или colorResource(...)
+                            color = Color.Gray
                         )
                     }
                     innerTextField()
@@ -260,7 +258,7 @@ fun CreateTextField(inputTextState: MutableState<String>, placeholderText: Strin
 
             modifier = Modifier
                 .width(widthPx)
-                .padding(vertical = 4.dp) // 10dp сверху и снизу
+                .padding(vertical = 4.dp)
         )
     }
 }
@@ -270,7 +268,7 @@ fun IntegerTextField(countState: MutableIntState) {
     TextField(
         value = "${countState.value}",
         onValueChange = { newValue:String ->
-            // Разрешаем только цифры
+            // Allow just digit
             if (newValue.all { it.isDigit() }) {
                 countState.value = newValue.toIntOrNull() ?: 0
             }

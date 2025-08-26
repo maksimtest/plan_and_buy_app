@@ -85,7 +85,6 @@ fun ProductNewLineContainer(mainViewModel: MainViewModel, categories: List<Categ
         modifier = Modifier
             .background(colorResource(id = R.color.main_background))
             .padding(vertical = 2.dp, horizontal = 2.dp)
-        //.border(1.dp, Color.DarkGray, RoundedCornerShape(8.dp))
     ) {
         CreateButton("+") {
             productLines.add(ProductLineState())
@@ -129,7 +128,6 @@ fun NewProductLine(
     val context = LocalContext.current
 
     val selectedUnitStates = remember { mutableStateMapOf<String, Boolean>() }
-    //units.forEach { selectedUnitStates.put(it.code, false) }
 
     var textFieldSize by remember { mutableStateOf(Size.Zero) }
     var productNameState = remember { mutableStateOf("") }
@@ -197,7 +195,6 @@ fun NewProductLine(
                                 onUpdate(
                                     state.copy(
                                         selectedCategory = category.name,
-                                        //selectedCategory = category.name,
                                         isDropdownExpanded = false
                                     )
                                 )
@@ -228,7 +225,6 @@ fun NewProductLine(
                     ),
                     verticalArrangement = androidx.compose.foundation.layout.Arrangement.spacedBy(2.dp)
                 ) {
-                    //val selectedUnitStates = remember { mutableStateMapOf<String, Boolean>() }
                     units.forEach { unit ->
                         if (selectedUnitStates[unit.code] == null) selectedUnitStates[unit.code] =
                             false
@@ -267,7 +263,6 @@ fun NewProductLine(
                                     .clickable {
                                         val current = selectedUnitStates[unit.code] == true
                                         selectedUnitStates[unit.code] = !current
-                                        //onUpdate(state.copy(isDropdownExpanded = true))
                                     }
                             )
                         }

@@ -205,7 +205,7 @@ fun ShoppingItem(
                             item.planCount,
                             factCount,
                             item.num,
-                            true,// ??
+                            true,
                             StringUtil.getYear(),
                             StringUtil.getMonth(),
                             StringUtil.getShortDate(),0,""
@@ -220,7 +220,6 @@ fun ShoppingItem(
                     modifier = Modifier
                         .width(120.dp)
                         .align(Alignment.CenterVertically)
-                        //.border(1.dp, Color.DarkGray, RoundedCornerShape(2.dp))
                         .padding(end = 10.dp),
                     fontSize = 20.sp,
                     fontWeight = FontWeight.Normal,

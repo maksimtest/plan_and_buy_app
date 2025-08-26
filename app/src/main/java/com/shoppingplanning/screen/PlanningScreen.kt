@@ -119,7 +119,6 @@ fun PlanningNewLineContainer(mainViewModel: MainViewModel, packageId: Int) {
         modifier = Modifier
             .background(colorResource(id = R.color.main_background))
             .padding(vertical = 2.dp, horizontal = 0.dp)
-            //.border(1.dp, Color.DarkGray, RoundedCornerShape(8.dp))
     ) {
         CreateButton("+") {
             planningLines.add(PlanningLineState())
@@ -360,12 +359,9 @@ fun PlanningItem(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(vertical = 10.dp, horizontal = 10.dp)
-                //    .height(60.dp)
                 ,
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.SpaceBetween
-                //.background(colorResource(id = R.color.teal_200))
-                //              .background(bcGrColor))
             ) {
                 Text(
                     text = item.productName,

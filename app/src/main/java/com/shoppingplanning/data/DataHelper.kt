@@ -42,7 +42,7 @@ class DataHelper(val mainViewModel: MainViewModel) {
         val uml = UnitEntity(unit5Id, unit5Code, unit5Code, 1)
 
 
-        // 3. Init CATEGORY
+        // 2. Init CATEGORY
         val catName1 = "Dairy"
         val catName2 = "Fish"
         val catName3 = "Meat"
@@ -93,7 +93,7 @@ class DataHelper(val mainViewModel: MainViewModel) {
             "catId1=$catId1, catId2=$catId2, catId3=$catId3, catId7=$catId7, catId8=$catId8"
         )
 
-        // 4. Init ProductUnitEntity instances
+        // 3. Init ProductUnitEntity instances
         val pu1 = ProductUnitEntity(0, 0, "", unit1Id, unit1.code, 1)
         val pu2 = ProductUnitEntity(0, 0, "", unit2Id, unit2.code, 2)
         val pu3 = ProductUnitEntity(0, 0, "", unit3Id, unit3.code, 3)
@@ -106,7 +106,7 @@ class DataHelper(val mainViewModel: MainViewModel) {
         mainViewModel.update(pu4)
         mainViewModel.update(pu5)
 
-        // 5. Init Products
+        // 4. Init Products
         val prName1 = "Milk"
         val prName2 = "Chease"
         val prName3 = "Salmom"

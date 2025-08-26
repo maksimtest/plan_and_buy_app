@@ -126,8 +126,8 @@ class MainViewModel(private val repository: AppRepository) : ViewModel() {
                         statCount,
                         statUnit
                     )
-                    planCount += it.planCount// * doubleKoef
-                    factCount += it.factCount// * doubleKoef
+                    planCount += it.planCount
+                    factCount += it.factCount
                     repository.updateItem(newItem)
                 }
                 var percent: Int =
@@ -193,7 +193,6 @@ class MainViewModel(private val repository: AppRepository) : ViewModel() {
     fun update(item: UnitEntity) {
         viewModelScope.launch {
             repository.updateUnit(item)
-            //    unitsMap = repository.getUnits().associateBy { it.id }
         }
     }
 
@@ -222,11 +221,9 @@ class MainViewModel(private val repository: AppRepository) : ViewModel() {
     val statPeriods = repository.periodsOfItems
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
 
-    //private val _selectedDate = MutableStateFlow(YearMonth.now())
     private val _selectedStateDateYear = MutableStateFlow(StringUtil.getYear())
     private val _selectedStateDateMonth = MutableStateFlow(StringUtil.getMonth())
 
-    //val selectedDate: StateFlow<YearMonth> = _selectedDate
     val selectedDateYear: StateFlow<Int> = _selectedStateDateYear
     val selectedDateMonth: StateFlow<Int> = _selectedStateDateMonth
 
