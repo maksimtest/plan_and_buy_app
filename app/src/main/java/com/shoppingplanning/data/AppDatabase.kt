@@ -24,7 +24,7 @@ import com.shoppingplanning.entity.UnitEntity
     ProductUnitEntity::class,
     UnitEntity::class,
     ItemEntity::class],
-    version = 3,
+    version = 6,
     exportSchema = true)
 
 abstract class AppDatabase : RoomDatabase() {
